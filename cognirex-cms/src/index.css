@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-violet-primary: #7C3AED;
+  --color-violet-deep: #6D28D9;
+  --color-navy-ink: #1F1B2E;
+  --color-lavender-tint: #EEE8FA;
+  --color-cream-surface: #F8F7FC;
+  --color-accent-yellow: #FACC15;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #F8F7FC;
+    color: #1F1B2E;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom sleek scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 58, 237, 0.45);
+}
+
+/* Tiptap Editor Styling */
+.ProseMirror {
+  outline: none;
+  min-height: 110px;
+}
+.ProseMirror p.is-editor-empty:first-child::before {
+  color: #9ca3af;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+.ProseMirror ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.ProseMirror ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.ProseMirror strong {
+  font-weight: 700;
+}
+
+/* CMS Dark Theme Support */
+[data-theme="dark"] .cms-shell {
+  background-color: #090D16 !important;
+  color: #E2E8F0 !important;
+}
+[data-theme="dark"] .cms-sidebar {
+  background-color: #0F1424 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+[data-theme="dark"] .cms-topbar {
+  background-color: rgba(15, 20, 36, 0.9) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #F8FAFC !important;
+}
+[data-theme="dark"] .cms-card {
+  background-color: #111827 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #F8FAFC !important;
+}
+[data-theme="dark"] .cms-muted-box {
+  background-color: #0B1120 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+[data-theme="dark"] .cms-nav-item:hover {
+  background-color: rgba(124, 58, 237, 0.14) !important;
+}
+[data-theme="dark"] .cms-heading {
+  color: #F8FAFC !important;
+}
+[data-theme="dark"] .cms-subtext {
+  color: #94A3B8 !important;
+}
+[data-theme="dark"] .cms-input {
+  background-color: #0B1120 !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  color: #F8FAFC !important;
+}

@@ -1,0 +1,9 @@
+# Root-level ignores (monorepo)
+node_modules/
+.next/
+.data/
+.env
+.env.local
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
